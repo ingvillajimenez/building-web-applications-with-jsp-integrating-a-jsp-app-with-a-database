@@ -1,3 +1,14 @@
 0:0:0:0:0:0:0:1 - - [25/Aug/2023:00:17:59 -0500] "GET /jsp-project/ HTTP/1.1" 200 1216
 0:0:0:0:0:0:0:1 - - [25/Aug/2023:00:19:24 -0500] "GET /jsp-project/jsp/viewusers.jsp HTTP/1.1" 200 3760
 0:0:0:0:0:0:0:1 - - [25/Aug/2023:00:24:47 -0500] "GET /jsp-project/jsp/adduserform.jsp HTTP/1.1" 404 754
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:17:05:55 -0500] "GET /jsp-project/ HTTP/1.1" 200 1216
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:17:07:07 -0500] "GET /jsp-project/jsp/viewusers.jsp HTTP/1.1" 200 3760
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:17:07:58 -0500] "GET /jsp-project/jsp/adduserform.jsp HTTP/1.1" 200 1920
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:17:10:37 -0500] "POST /jsp-project/jsp/adduser.jsp HTTP/1.1" 500 2247
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:17:13:22 -0500] "GET /jsp-project/ HTTP/1.1" 200 1216
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:17:13:24 -0500] "GET /jsp-project/jsp/adduserform.jsp HTTP/1.1" 200 1920
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:17:13:36 -0500] "POST /jsp-project/jsp/adduser.jsp HTTP/1.1" 200 113
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:17:14:30 -0500] "GET /jsp-project/jsp/viewusers.jsp HTTP/1.1" 200 4185
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:17:15:51 -0500] "GET /jsp-project/jsp/adduserform.jsp HTTP/1.1" 200 1920
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:17:17:15 -0500] "POST /jsp-project/jsp/adduser.jsp HTTP/1.1" 200 113
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:17:17:49 -0500] "GET /jsp-project/jsp/viewusers.jsp HTTP/1.1" 200 4617

@@ -1,1 +1,2 @@
-com/skillsoft/SignInServlet.class
+com/skillsoft/UserDAO.class
+com/skillsoft/model/User.class

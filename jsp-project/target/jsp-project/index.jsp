@@ -1,51 +1,44 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
-<%@ page import= "java.sql.*" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <title>JSP and Databases</title>
+        <title>CRUD Operations</title>
     </head>
+    <style>
+        .btn {
+            border: 3px solid black;
+            color: white;
+            padding: 14px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .info {
+            background-color: #2196F3;
+        }
+    </style>
+
     <body>
-
-        <%
-            String url = "jdbc:mysql://localhost:3306/JSPDatabase";
-            String username = "root";
-            String password = "admin123";
-            String sql = "select * from Customers";
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection(url, username, password);
-
-            Statement st = con.createStatement();
-
-            ResultSet rs = st.executeQuery(sql);
-        %>
-        <center>
-            <h3> The customers in the database: </h3><br><br>
-            <table border="2">
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Country</th>
-                </tr>
-
-            <% while(rs.next()) { %>
-
-                <tr>
-                    <td><%= rs.getInt("id") %></td>
-                    <td><%= rs.getString("name") %></td>
-                    <td><%= rs.getString("email") %></td>
-                    <td><%= rs.getString("country") %></td>
-                </tr>
-
-            <% }
-
-                rs.close();
-            %>
-            </table>
-        </center>
-
+        <h3 style="text-align: center">Working with Users</h3>
+        <div class="center">
+            <button class="btn info"
+                onclick="window.location.href='jsp/adduserform.jsp'">Add User</button>
+            <button class="btn info"
+                onclick="window.location.href='jsp/viewusers.jsp'">View Users</button>
+        </div>
     </body>
 </html>

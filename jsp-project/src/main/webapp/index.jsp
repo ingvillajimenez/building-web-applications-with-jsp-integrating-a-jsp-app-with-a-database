@@ -42,7 +42,7 @@ pageEncoding="UTF-8"%>
 
             <% }
 
-                rs.close()
+                rs.close();
             %>
             </table>
         </center>

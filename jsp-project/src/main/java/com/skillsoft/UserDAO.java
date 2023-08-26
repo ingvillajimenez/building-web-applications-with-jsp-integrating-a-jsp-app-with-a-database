@@ -117,6 +117,23 @@ public class UserDAO {
         return status;
     }
 
+    public static int delete(User u) {
+        int status = 0;
+
+        try {
+            Connection con = getConnection();
+            PreparedStatement ps = con.prepareStatement("delete from Customers where id=?");
+            ps.setInt(1, u.getId());
+            status = ps.executeUpdate();
+
+            con.close();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+        return status;
+    }
+
 }
 
 // For older Tomcat users

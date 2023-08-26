@@ -23,22 +23,6 @@ public class UserDAO {
         return con;
     }
 
-    public static int save(User u) {
-        int status = 0;
-        try {
-            Connection con = getConnection();
-            PreparedStatement ps = con.prepareStatement("insert into Customers(name, email, gender, country) value(?, ?, ?, ?)");
-            ps.setString(1, u.getName());
-            ps.setString(2, u.getEmail());
-            ps.setString(3, u.getGender());
-            ps.setString(4, u.getCountry());
-            status = ps.executeUpdate();
-        } catch (Exception e){
-            System.out.println(e);
-        }
-        return status;
-    }
-
     public static List<User> getAllRecords() {
 
         List<User> userList = new ArrayList<User>();
@@ -90,6 +74,49 @@ public class UserDAO {
 
         return user;
     }
+
+    public static int save(User u) {
+        int status = 0;
+
+        try {
+            Connection con = getConnection();
+            PreparedStatement ps = con.prepareStatement("insert into Customers(name, email, gender, country) value(?, ?, ?, ?)");
+            ps.setString(1, u.getName());
+            ps.setString(2, u.getEmail());
+            ps.setString(3, u.getGender());
+            ps.setString(4, u.getCountry());
+            status = ps.executeUpdate();
+
+            con.close();
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+        return status;
+
+    }
+
+    public static int update(User u) {
+        int status = 0;
+        try {
+            Connection con = getConnection();
+            PreparedStatement ps = con
+                    .prepareStatement("update Customers set name=?, email=?, gender=?, country=? where id=?");
+            ps.setString(1, u.getName());
+            ps.setString(2, u.getEmail());
+            ps.setString(3, u.getGender());
+            ps.setString(4, u.getCountry());
+            ps.setInt(5, u.getId());
+            status = ps.executeUpdate();
+
+            con.close();
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return status;
+    }
+
 }
 
 // For older Tomcat users

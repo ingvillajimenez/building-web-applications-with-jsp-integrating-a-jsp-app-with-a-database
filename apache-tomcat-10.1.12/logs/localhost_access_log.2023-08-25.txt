@@ -12,3 +12,8 @@
 0:0:0:0:0:0:0:1 - - [25/Aug/2023:17:15:51 -0500] "GET /jsp-project/jsp/adduserform.jsp HTTP/1.1" 200 1920
 0:0:0:0:0:0:0:1 - - [25/Aug/2023:17:17:15 -0500] "POST /jsp-project/jsp/adduser.jsp HTTP/1.1" 200 113
 0:0:0:0:0:0:0:1 - - [25/Aug/2023:17:17:49 -0500] "GET /jsp-project/jsp/viewusers.jsp HTTP/1.1" 200 4617
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:19:24:27 -0500] "GET /jsp-project/ HTTP/1.1" 200 1216
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:19:25:15 -0500] "GET /jsp-project/jsp/viewusers.jsp HTTP/1.1" 200 4617
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:19:26:47 -0500] "GET /jsp-project/jsp/edituserform.jsp?id=105 HTTP/1.1" 200 1574
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:19:28:49 -0500] "POST /jsp-project/jsp/edituser.jsp HTTP/1.1" 200 138
+0:0:0:0:0:0:0:1 - - [25/Aug/2023:19:29:46 -0500] "GET /jsp-project/jsp/viewusers.jsp HTTP/1.1" 200 4620
